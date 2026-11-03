@@ -1,0 +1,114 @@
+@use '../../styles/variables' as *;
+
+.header {
+  background: #fff;
+  font-family: $font-main;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 12px 0;
+  border-bottom: 1px solid $color-border;
+  font-size: 13px;
+  color: $color-text;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: $color-primary;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 12px 0;
+}
+
+.logo {
+  display: block;
+  height: 44px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 630px;
+  height: 48px;
+  padding: 0 20px;
+  background: $color-bg-input;
+  border-radius: 8px;
+
+  input {
+    flex: 1;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 14px;
+    color: $color-text;
+    outline: none;
+  }
+
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 24px;
+
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.nav {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: $color-primary;
+  }
+}
