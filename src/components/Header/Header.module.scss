@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .header {
   background: #fff;
@@ -15,7 +15,7 @@
   justify-content: center;
   gap: 120px;
   padding: 12px 0;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1.2px solid $color-border;
   font-size: 13px;
   color: $color-text;
 
@@ -51,7 +51,7 @@
   max-width: 630px;
   height: 48px;
   padding: 0 20px;
-  background: $color-bg-input;
+  background: #f6f5f2;
   border-radius: 8px;
 
   input {
@@ -62,6 +62,11 @@
     font-size: 14px;
     color: $color-text;
     outline: none;
+
+    &::placeholder {
+      color: $color-text-white;
+      opacity: 1;
+    }
   }
 
   button {
@@ -97,7 +102,7 @@
     align-items: center;
     gap: 8px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     color: $color-text;
     text-decoration: none;
