@@ -10,6 +10,7 @@ import iconFashion from '../../assets/icons/categories/icon-fashion.svg'
 const categories = [
     {
         image: iconTechnology,
+        active: true,
         nameImage: "Imagem icone de tecnologia",
         name: "Tecnologia"
     },
@@ -57,7 +58,10 @@ export default function CategoryList() {
       <ul className={styles.lista}>
         {categories.map( (item) => (
         <li key={item.name}>
-          <button type="button" className={styles.item}>
+          <button 
+          type="button" 
+          className={`${styles.item} ${item.active ? styles.ativo : ""}`}
+          >
             <span className={styles.quadrado}>
               <img src={item.image} alt={item.nameImage} />
             </span>

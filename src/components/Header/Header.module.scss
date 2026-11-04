@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .header {
   background: #fff;
@@ -13,46 +13,51 @@
 .info {
   display: flex;
   justify-content: center;
-  gap: 120px;
-  padding: 12px 0;
-  border-bottom: 1.2px solid $color-border;
-  font-size: 13px;
+  gap: 119px;
+  padding: 6px 0;
+  border-bottom: 1px solid $color-border;
+  font-size: 12px;
+  font-weight: 500;
   color: $color-text;
 
   li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
   }
 
   strong {
     font-weight: 600;
-    color: $color-primary;
+    color: $color-link;
   }
 }
 
 .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 630px 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
   padding: 12px 0;
+  border-bottom: 1px solid $color-border;
 }
 
 .logo {
   display: block;
-  height: 44px;
+  width: 139px;
+  height: 41px;
 }
 
 .search {
   display: flex;
   align-items: center;
-  flex: 1;
-  max-width: 630px;
   height: 48px;
-  padding: 0 20px;
-  background: #f6f5f2;
-  border-radius: 8px;
+  padding: 0 24px 0 16px;
+  background: $color-bg-input;
+  border-radius: 10px;
 
   input {
     flex: 1;
@@ -60,7 +65,8 @@
     background: transparent;
     font: inherit;
     font-size: 14px;
-    color: $color-text;
+    font-weight: 500;
+    color: $color-text-dark;
     outline: none;
 
     &::placeholder {
@@ -70,50 +76,80 @@
   }
 
   button {
+    display: flex;
     border: 0;
     background: transparent;
     cursor: pointer;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
   }
 }
 
 .actions {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-self: end;
+  gap: 32px;
 
   button {
+    display: flex;
     border: 0;
     background: transparent;
     cursor: pointer;
   }
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  
+  button:first-child img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .nav {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 1; 
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(57, 48, 19, 0.12);
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 91px;
     height: 40px;
   }
 
   a {
     display: flex;
     align-items: center;
-    gap: 8px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     color: $color-text;
-    text-decoration: none;
 
     &:hover {
-      color: $color-primary;
+      color: $color-dark-purple;
     }
   }
 
   .highlight {
-    font-weight: 600;
-    color: $color-primary;
+    color: $color-link;
+  }
+
+  .subscription {
+    gap: 12px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
