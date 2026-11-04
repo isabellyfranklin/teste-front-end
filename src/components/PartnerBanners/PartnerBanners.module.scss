@@ -20,9 +20,10 @@
   overflow: hidden;
   border-radius: 20px;
   background-image: url('../../assets/images/partner.png');
-  background-position: center;
+  background-size: 125% auto;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #1a1208;
   color: #fff;
 
   &::before {
