@@ -13,6 +13,27 @@ Página de vitrine de produtos desenvolvida em React e TypeScript, seguindo o la
 - Node.js 20 ou superior
 - npm
 
+## Como rodar
+
+```bash
+npm install
+npm run dev
+```
+
+A aplicação abre em `http://localhost:5173`.
+
+O projeto usa TypeScript 6.0 por compatibilidade com o `typescript-eslint`. O arquivo `.npmrc` (`legacy-peer-deps=true`) foi mantido por segurança na instalação das dependências.
+
+## Como compilar e testar
+
+```bash
+npm run build     # compila o projeto (TypeScript + Vite)
+npm run preview   # serve a versão compilada
+npm run lint      # verifica o código com o ESLint
+```
+
+O projeto não tem testes automatizados. A conferência foi visual, comparando com o layout do Figma.
+
 ## Estrutura
 
 ```
