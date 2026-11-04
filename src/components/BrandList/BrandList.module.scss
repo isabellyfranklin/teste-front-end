@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.brands {
+  margin-top: $section-gap;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  margin-top: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 211px;
+  height: 211px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.13);
+
+  img {
+    width: 117px;
+    height: auto;
+  }
+}

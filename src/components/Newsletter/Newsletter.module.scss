@@ -1,0 +1,93 @@
+@use '../../styles/variables' as *;
+
+.newsletter {
+  margin-top: $section-gap;
+  background: $color-dark-purple;
+  font-family: $font-main;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 515px;
+
+  h2 {
+    font-family: $font-title;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 639px;
+  margin-top: 5.5px;
+}
+
+.fields {
+  display: flex;
+  gap: 8px;
+
+  input {
+    width: 233px;
+    height: 42px;
+    padding: 12px 24px;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 18px;
+
+    &::placeholder {
+      color: #676767;
+    }
+  }
+
+  button {
+    width: 157px;
+    height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background: $color-yellow;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #161615;
+    cursor: pointer;
+  }
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+
+  input {
+    width: 15px;
+    height: 15px;
+  }
+}

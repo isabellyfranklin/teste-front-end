@@ -1,32 +1,66 @@
+import { useState } from 'react';
 import { Header } from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import CategoryList from './components/CategoryList/CategoryList';
-import SectionTitle from './components/SectionTitle/SectionTitle';
-import ProductCard from './components/ProductCard/ProductCard';
+import ProductShowcase from './components/ProductShowcase/ProductShowcase';
+import PartnerBanners from './components/PartnerBanners/PartnerBanners';
+import BrandList from './components/BrandList/BrandList';
+import Newsletter from './components/Newsletter/Newsletter';
+import Footer from './components/Footer/Footer';
+import ProductModal from './components/ProductModal/ProductModal';
 import type { Product } from './types/Product';
-
-const testProduct: Product = {
-  productName: 'Iphone 11 PRO MAX BRANCO 1',
-  descriptionShort: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  photo:
-    'https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png',
-  price: 2890,
-};
+import { useProducts } from './hooks/useProducts';
 
 export default function App() {
+  const { products, loading, error } = useProducts();
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   return (
     <>
       <Header />
       <main>
         <Banner />
         <CategoryList />
-        <SectionTitle title="Produtos relacionados" withLines />
 
-        {/* temporário: só para testar o card, some quando fizermos a vitrine */}
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '24px 0' }}>
-          <ProductCard product={testProduct} onSelect={(p) => console.log(p)} />
-        </div>
+        {loading && <p>Carregando produtos...</p>}
+        {error && <p role="alert">{error}</p>}
+
+        <ProductShowcase
+          title="Produtos relacionados"
+          products={products}
+          onSelect={setSelectedProduct}
+          showTabs
+        />
+
+        <PartnerBanners />
+
+        <ProductShowcase
+          title="Produtos relacionados"
+          products={products}
+          onSelect={setSelectedProduct}
+          linkText="Ver todos"
+        />
+
+        <PartnerBanners />
+
+        <BrandList />
+
+        <ProductShowcase
+          title="Produtos relacionados"
+          products={products}
+          onSelect={setSelectedProduct}
+          linkText="Ver todos"
+        />
+
+        <Newsletter />
       </main>
+      <Footer />
+
+      <ProductModal
+        key={selectedProduct?.productName}
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </>
   );
 }

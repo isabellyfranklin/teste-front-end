@@ -1,0 +1,89 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  font-family: $font-main;
+  color: $color-text-dark;
+}
+
+.main {
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 354px;
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.logo {
+  width: 164px;
+  height: 48px;
+}
+
+.socials {
+  display: flex;
+  gap: 26px;
+  margin-top: 9px; 
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 198px;
+  background: #d9d9d9;
+}
+
+.columns {
+  display: flex;
+  gap: 100px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgba(34, 34, 34, 0.71);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(34, 34, 34, 0.71);
+  }
+}
+
+.workSans {
+  font-family: $font-links;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 300;
+}

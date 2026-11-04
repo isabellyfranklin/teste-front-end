@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+
+.showcase {
+  margin-top: $section-gap;
+  font-family: $font-main;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1364px;
+  margin: 24px auto 0;
+  padding: 0 47px; // 1364 - 94 = 1270 = 4 cards + 3 gaps
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.arrow {
+  position: absolute;
+  top: 246px; // centro da foto dos cards
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}

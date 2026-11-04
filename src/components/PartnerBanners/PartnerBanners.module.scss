@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+
+.section {
+  margin-top: $section-gap;
+  font-family: $font-main;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  max-width: 1281px;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+  height: 350px;
+  padding: 114px 0 0 44px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-image: url('../../assets/images/partner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 261px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 85%);
+    opacity: 0.8;
+  }
+
+  > * {
+    position: relative; 
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  p {
+    width: 200px;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 48px;
+  margin-top: 32px;
+  border-radius: 6px;
+  background: $color-yellow;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+  color: $color-dark-purple;
+}
