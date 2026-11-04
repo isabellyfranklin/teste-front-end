@@ -1,0 +1,89 @@
+@use '../../styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 304px;
+  height: 500px;
+  padding: 32px 14px 16px 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 19px rgba(0, 0, 0, 0.22);
+  font-family: $font-main;
+  color: $color-text-dark;
+}
+
+// área clicável: foto + descrição
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 228px;
+    object-fit: contain;
+  }
+
+  p {
+    min-height: 46px; // reserva 2 linhas, o card não "pula" se o texto for curto
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+.prices {
+  margin-top: 12px;
+}
+
+.oldPrice {
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+  text-decoration: line-through;
+}
+
+.price {
+  margin-top: 2px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.installments {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.freeShipping {
+  margin-top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color-primary;
+}
+
+.buy {
+  height: 44px;
+  margin-top: auto; // empurra o botão para o fim do card
+  border: 0;
+  border-radius: 4px;
+  background: $color-primary;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
